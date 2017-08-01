@@ -118,7 +118,12 @@ webInput.setAttribute("placeholder", "Current website url");
 
 let languageInput = document.createElement("select");
 fields.appendChild(languageInput);
-languageInput.setAttribute("placeholder", "Select language...");
+languageInput.setAttribute("placeholder", "Select language...");     
+
+
+// let languageText = document.createElement("p");
+// languageInput.appendChild(languageText);
+// languageText.innerText = "test"
 
 
 
@@ -133,7 +138,10 @@ languageInput.setAttribute("placeholder", "Select language...");
 
 let dropdownOptions = document.createElement("option");
 languageInput.appendChild(dropdownOptions);
-
+dropdownOptions.value = ("EN", "EN");
+dropdownOptions.label = ("English", "English");
+dropdownOptions.value = ("FR", "FR");
+dropdownOptions.label - ("French", "French");
 
 
 
