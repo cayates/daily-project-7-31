@@ -132,8 +132,7 @@ let formData = [
 
 
 
-let dataField = document.getElementById("fields");
-
+// let languageOptions = formData[4].options;
 
 
 let firstInput = document.createElement("input");
@@ -154,8 +153,19 @@ webInput.setAttribute("placeholder", "Current website url");
 
 let languageInput = document.createElement("select");
 fields.appendChild(languageInput);
-languageInput.setAttribute("placeholder", "Select language...");     
 
+// languageInput.setAttribute("placeholder", "English");     
+
+let dropdownOptions = document.createElement("option");
+languageInput.appendChild(dropdownOptions);        
+dropdownOptions.label = ("Select Language");
+
+for (i=0; i < formData[4].options.length; i++){
+  let dropdownOptionSelections = document.createElement("option");
+  dropdownOptionSelections.setAttribute("label", formData[4].options[i].label);
+  dropdownOptionSelections.setAttribute("value", formData[4].options[i].value);
+  languageInput.appendChild(dropdownOptionSelections);
+}
 
 // selectObject.add(option, [1]);
 
@@ -163,9 +173,9 @@ languageInput.setAttribute("placeholder", "Select language...");
 //   select.appendChild(dropdownOptions);
 // }
 
-let dropdownOptions = document.createElement("option");
-languageInput.appendChild(dropdownOptions);
-dropdownOptions.label = ("English", "Select Language");    
+
+
+
 
 
 
